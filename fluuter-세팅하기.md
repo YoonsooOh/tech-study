@@ -9,3 +9,5 @@ flutter config --android-studio-dir = ```"C:\Program Files\Android\Android Studi
 > 세팅 참고 링크 모음: </br>
 > [플러터(Flutter) 개발 환경 구축](https://brunch.co.kr/@mystoryg/114) </br>
 > [flutter.dev](https://flutter.dev/docs/get-started/install)
+
+> [안젤라영 플러터 강의](https://www.udemy.com/course/flutter-bootcamp-with-dart/learn/lecture)
