@@ -11,3 +11,10 @@ flutter config --android-studio-dir = ```"C:\Program Files\Android\Android Studi
 > [flutter.dev](https://flutter.dev/docs/get-started/install)
 
 > [안젤라영 플러터 강의](https://www.udemy.com/course/flutter-bootcamp-with-dart/learn/lecture)
+
+
+</br>
+
+# flutter platform
+
+안드로이드 ios 웹 
