@@ -20,3 +20,4 @@
 #keymapping - shortcup for programming
 : file>setting>keymap>searching(with clear words)>right click+shortcup>apply
 >>>>>>> 73c110bf95dcc0aafcbe3a57fcbb5f019d0835f9
+
