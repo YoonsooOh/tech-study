@@ -3,11 +3,7 @@
 
 * 주의사항: Indentation in yaml file (모든 indent는 two spaces)
   
-<<<<<<< HEAD
 * 왼쪽 바에서 두 칸 간격 뒤에 있는 내용: top level item의 embedded된 children에 해당
-=======
-* 왼쪽 바에서 두 칸 간격 뒤에 있는 내용: top level item의 enbeded된 children에 해당
->>>>>>> 3090737e1a33365b80e44d07c4fdc89841101393
 
 <예시 코드>
 
