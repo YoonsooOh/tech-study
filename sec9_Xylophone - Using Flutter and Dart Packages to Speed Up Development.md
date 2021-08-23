@@ -1,9 +1,9 @@
 # Flutter Packages
 
-URL: http://pub.dartlang.org/flutter
-
-관련 자료 참고) https://flutter.dev/docs/development/packages-and-plugins/using-packages
-
+> #### 교육 관련 링크
+> - URL: [**Link**](http://pub.dartlang.org/flutter)
+> - [**관련 자료 참고**](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
+---
 * 사용법
 1) installing 탭의 yaml 파일에 dependencies 추가
 2) 우측 상단의 packages get 클릭 > 웹사이트 상의 패키지를 다운로드해서 프로젝트로 통합됨
@@ -121,10 +121,11 @@ int multiply(int n1, int n2) {
 ```
 
 # Arrow Function
-- arrow syntax(=>) 
-1) =>를 활용해서 {}사이의 내용을 한줄로 줄일 수 있음
+- arrow syntax(`=>`) 
+1) `=>`를 활용해서 {}사이의 내용을 한줄로 줄일 수 있음
 
-```
+
+```dart
 void main() {
   int result = add();
   print(result);
@@ -138,14 +139,14 @@ int add() => 5 + 2;
 ```
 2) single line of instruction일 때만 aroow syntax를 사용할 수 있음 </br>
 아래 예시는 두줄이기 때문에 arrow syntax 사용할 수 없음
-```
+```dart
 int add() {
   print('I got called.');
   return 5 + 2;
 }
 ```
 3) () 안에 input을 넣을 수 있음
-```
+```dart
 void main() {
   int result = add(3, 11);
   print(result);
