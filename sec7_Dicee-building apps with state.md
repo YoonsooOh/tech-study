@@ -67,9 +67,9 @@ Dart = Statically typed language
 => statically typed language를 다이나믹하게 바꾸는 방법
 : 고정된 데이터 타입을 갖지 않는 variable을 만들 수 있음
 
-![img_1.png](img_1.png)
+![./img_1.png](img_1.png)
 var a <- dynamic type variable
-![img_2.png](img_2.png)
+![./img_2.png](img_2.png)
 
 * 사용해야 할 이유가 있지 않는 한, var 또는 dynamic data type을 사용하는 것은 지양 
 
@@ -90,13 +90,13 @@ import 'dart:math';
 
 https://api.dart.dev/stable/2.13.4/dart-math/dart-math-library.html
 
-![img_3.png](img_3.png)
+![./img_3.png](img_3.png)
 
 # Summary
 1) 새 variable 생성
 2) rightDiceNumber = Random().nextInt(6)+1;
 3) rightDiceNumber가 언제 바뀌는지 정하기 (setState)
-![img_4.png](img_4.png)
+![./img_4.png](img_4.png)
 
 * 양쪽 flatbutton 중 하나만 클릭해도 양쪽 이미지가 모두 바뀌도록 하기
-![img_5.png](img_5.png)
+![./img_5.png](img_5.png)
