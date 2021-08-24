@@ -119,3 +119,68 @@ if (correctAnswer == false) {
 ```
 
 # Dart Conditionals - IF/ELSE
+1) == (**equal**) / != (**not equal**) / && (**and**)
+
+2) if절
+```dart
+if (track == 'clear'){go();}
+```
+-> ()사이: condition, {}사이: instruction
+
+3) if-else절
+```dart
+if (track == 'clear'){
+  goStraight();
+} else {
+  turnRight();
+}
+```
+
+4) Love Calculator
+```dart
+import 'dart:math';
+
+void main() {
+  loveCalculator();
+
+}
+
+void loveCalculator(){
+  
+  int loveScore = Random().nextInt(100) + 1;
+  print(loveScore);
+  
+  if (loveScore > 70) {
+    print('You love each other like Kanye loves Kanye.');
+  } else {
+    print('You like each other');
+  }
+}
+```
+5) else if절
+
+else if절은 여러 개 가능
+```dart
+import 'dart:math';
+
+void main() {
+  loveCalculator();
+
+}
+
+void loveCalculator(){
+  
+  int loveScore = Random().nextInt(100) + 1;
+  print(loveScore);
+  
+  if (loveScore > 70) {
+    print('You love each other like Kanye loves Kanye.');
+  } 
+  else if (loveScore > 50) {
+    print('You like each other');
+  }
+  else {
+    print('You don\'t like each other');
+  }
+}
+```
