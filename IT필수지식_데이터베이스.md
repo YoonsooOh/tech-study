@@ -14,8 +14,8 @@
 [용어]
 - 엑셀의 sheet = RDB의 table
 - 엑셀의 파일 1개 = RDB의 Schema 또는 Database
-![img_17.png](img_17.png)
-![img_18.png](img_18.png)
+![img_17.png](images/img_17.png)
+![img_18.png](images/img_18.png)
 ### RDBMS-Relational database management system
 - 의미: 데이터 수정 등을 사람이 직접 하지 않고, 프로그램에게 대신 맡기는 데 이에 해당
 - 소프트웨어 종류: MySQL, ORACLE database, Microsoft SQL, MariaDB
@@ -24,7 +24,7 @@
    - 서버 컴퓨터의 OS 위에 서버 프로그램이 올라가고, DBMS라는 프로그램이 올라감(1~2개의 프로그램이 회사 전체의 데이터 관리)
    - 서버 개발자는 서버 프로그램을 만들어서 DBMS에게 데이터를 CRUD 하도록 요청(DBMS에게 **요청만 하면됨**)
 - 요청할 때 쓰는 언어: **SQL**(Structured Query Language) - SQL을 알면 DBMS에게 일을 부탁할 수 있음
-![img_19.png](img_19.png)
+![img_19.png](images/img_19.png)
 
 ---
 #### 데이터 저장 방식
@@ -32,7 +32,7 @@
 2. DBMS(소프트웨어)는 메모리 위에서 CPU(중앙처리장치)가 돌림 
 3. DBMS는 하드디스크로 데이터를 집어넣음
 4. CPU, RAM, 보조기억장치가 있는 곳이라면 어디든 DBMS를 쓸 수 있음 -> 클라이언트 컴퓨터와 서버 컴퓨터 모두 가지고 있으므로 DBMS를 돌릴 수 있음 -> 데이터가 클라에 있을 수도, 서버에 있을 수도 있음을 의미
-![img_20.png](img_20.png)
+![img_20.png](images/img_20.png)
 
 e.g) 
    1. 알람앱의 모든 데이터는 네트워크가 필요 없음/ **클라이언트**에 있는 데이터 

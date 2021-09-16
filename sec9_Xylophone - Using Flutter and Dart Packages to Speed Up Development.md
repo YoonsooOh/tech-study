@@ -22,8 +22,8 @@
 3) ()안에 바뀌는 숫자들을 입력한다. <br>
 
 <참고 이미지>
-![img_6.png](img_6.png)
-![img_7.png](img_7.png)
+![img_6.png](images/img_6.png)
+![img_7.png](images/img_7.png)
 
 # Dart Function part1 summary
 1. 가장 기본적인 function 구조 </br>
@@ -61,28 +61,28 @@ double cost = bottles * 1.5; </br>
 }
 
 <예시>
-![img_8.png](img_8.png)
-![img_9.png](img_9.png)
-![img_10.png](img_10.png)
+![img_8.png](images/img_8.png)
+![img_9.png](images/img_9.png)
+![img_10.png](images/img_10.png)
 
 # Dart Function part3 
 :output을 갖는 function
 
 <오류 발생 케이스></br>
 : output이 없음</br>
-![img_11.png](img_11.png)
+![img_11.png](images/img_11.png)
 
 <수정></br>
-![img_12.png](img_12.png)
+![img_12.png](images/img_12.png)
 
 <output 없는 케이스></br>
-![img_13.png](img_13.png)
+![img_13.png](images/img_13.png)
 
 <output을 갖는 케이스로 수정></br>
 1) void > 결과값으로 원하는 data type으로 수정
 2) return 추가 (뒤에는 function의 output 적기)
 
-![img_14.png](img_14.png)
+![img_14.png](images/img_14.png)
 
 [function 만드는 방법]
 1. 맨앞의 int=output data type
@@ -90,10 +90,10 @@ double cost = bottles * 1.5; </br>
 3. money-2=output (keyword 'return'뒤의 내용)
 4. return=marks the output 
 
-![img_15.png](img_15.png)
+![img_15.png](images/img_15.png)
 
 [function 불러오는 방법]</br>
-![img_16.png](img_16.png)
+![img_16.png](images/img_16.png)
 
 # Functions Challenge
 <문제와 정답>
