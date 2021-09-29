@@ -22,7 +22,7 @@ void main() {
 class Car {
   
   CarType carStyle;
-  car({this.carStyle});
+  car({this.carStyle});ㅈ
 }
 
 enum CarType {
