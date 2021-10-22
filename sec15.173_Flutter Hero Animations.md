@@ -66,3 +66,22 @@ void initState() {
       print(animation.value);
     });
 ```
+---
+# Prepackaged Flutter Animations
+[참고자료](https://pub.dev/packages/animated_text_kit)
+
+- 방법
+  1) pubspec yaml에 복붙 후 pub get 클릭
+  ```dart
+    animated_text_kit: ^1.3.0
+  ```
+  2) import하기
+  ```dart
+  import 'package:animated_text_kit/animated_text_kit.dart';
+  ```
+  3) animatedTextKit로 변경
+  ```dart
+  TyperAnimatedTextKit(  //기존 Text 
+                  text: ['Flash Chat'],  //list []로 감싸기
+                  textStyle: TextStyle(  //style -> textStyle로 수정
+  ```
