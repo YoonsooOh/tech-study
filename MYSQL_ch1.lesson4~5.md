@@ -75,3 +75,16 @@ SELECT
 FROM Customers
 GROUP BY Country, City;
 ```
+
+WHERE는 그룹하기 전 데이터, HAVING은 그룹 후 집계에 사용됨
+```
+WHERE
+GROUP BY 
+HAVING
+```
+
+2. DISTINCT - 중복된 값을 제거
+
+- 기본적으로는 정렬되지 않음
+- GROUP BY와 달리 집계함수가 사용되지 않음 
+  - ORDER BY를 붙여서 수동으로 정렬할 수 있음
