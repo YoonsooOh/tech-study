@@ -1,33 +1,65 @@
 @startuml
 
-title 1. 강의 수강시 GoormAuth 시퀀스 다이어그램
+title 2. 학습자 출결 시 본인인증 강제 기능
 
-actor KDigital_trainee
-box GoormChannelService
-participant GoormAuth
-participant GoormPublic_mOTP_module
+actor 훈련생
+
+box "구름 내부모듈"
+participant "채널 강의 페이지"
+participant "구름 출결 본인인증 시스템"
+participant "구름 Public mOTP 연동모듈"
 endbox
-box 외부인증모듈
+
+box "외부 본인인증 시스템"
 participant mOTP
-participant 타사본인인증모듈
-endbox
-box GoormChannelService
-participant Channel수강생페이지
+participant "2차 본인인증모듈"
 endbox
 
-KDigital_trainee -> GoormAuth : 인증 요청
-GoormAuth -> mOTP : Client의 인증 정보를 전달
+훈련생 -> "채널 강의 페이지" : 출결 버튼 클릭
+"채널 강의 페이지" -> "구름 출결 본인인증 시스템" : 본인 인증 페이지로 연결
+"구름 출결 본인인증 시스템" -> "구름 Public mOTP 연동모듈" : 본인 인증 요청
+"구름 Public mOTP 연동모듈" -> mOTP : 본인 인증 요청
 
-alt 인증 성공
-mOTP --> GoormAuth : 인증 성공 응답 제공 (200 OK)
-GoormAuth --> KDigital_trainee : 인증 성공 메시지 전달 후 Channel 페이지로 연결
-KDigital_trainee -> Channel수강생페이지 : 강의 정보 요청
-Channel수강생페이지 --> KDigital_trainee : 강의 정보 페이지 반환
+alt 1. [성공 Case] mOTP 인증 성공 시
+mOTP --> "구름 Public mOTP 연동모듈" : 인증 성공 메세지
+"구름 Public mOTP 연동모듈" --> "구름 출결 본인인증 시스템" : 인증 성공 메세지
+"구름 출결 본인인증 시스템" --> "채널 강의 페이지": 인증 성공 메세지
+"채널 강의 페이지" --> 훈련생 : 퇴장 버튼이 활성화된 페이지를 제공
 
-else 인증 실패
-mOTP --> GoormAuth : 인증 실패 응답 제공 (4xx/5xx ERROR)
-GoormAuth --> KDigital_trainee: 타사 본인인증 모듈로 연결하여 다른 방식으로 본인인증 할 수 있게 유도
-KDigital_trainee -> 타사본인인증모듈: 본인인증 요청
+else 2. [성공 Case] mOTP로 본인인증 실패 후 2차 본인인증 모듈로 인증 성공 시
+mOTP --> "구름 Public mOTP 연동모듈" : 인증 실패 메세지
+"구름 Public mOTP 연동모듈" -> "2차 본인인증모듈" : 인증 요청
+note right: mOTP 인증 실패 시 naver, 카카오, PASS 앱 등으로\n 2차 인증 시도
+"2차 본인인증모듈" --> "구름 Public mOTP 연동모듈" : 인증 성공 메세지
+"구름 Public mOTP 연동모듈" --> "구름 출결 본인인증 시스템" : 인증 성공 메세지
+"구름 출결 본인인증 시스템" --> "채널 강의 페이지": 인증 성공 메세지
+"채널 강의 페이지" --> 훈련생 : 퇴장 버튼이 활성화된 페이지를 제공
+
+else 3. [실패 Case] mOTP로 본인인증 실패 후 2차 본인인증 모듈 인증 실패 시
+mOTP --> "구름 Public mOTP 연동모듈" : 인증 실패 메세지
+"구름 Public mOTP 연동모듈" -> "2차 본인인증모듈" : 인증 요청
+"2차 본인인증모듈" --> "구름 Public mOTP 연동모듈" : 인증 실패 메세지
+"구름 Public mOTP 연동모듈" --> "구름 출결 본인인증 시스템" : 인증 실패 메세지
+"구름 출결 본인인증 시스템" --> "채널 강의 페이지": 인증 실패 메세지
+"채널 강의 페이지" --> 훈련생 : 본인인증 실패 팝업 후\n퇴장 버튼 비활성화
+
 end
 
+/'
+훈련생 -> "구름 출결 본인인증 시스템" : 인증 요청
+"구름 출결 본인인증 시스템" -> mOTP : Client의 인증 정보를 전달
+
+alt 인증 성공
+mOTP --> "구름 출결 본인인증 시스템" : 인증 성공 응답 제공 (200 OK)
+"구름 출결 본인인증 시스템" --> 훈련생 : 인증 성공 메시지 전달 후 Channel 페이지로 연결
+훈련생 -> "채널 강의 페이지" : 강의 정보 요청
+"채널 강의 페이지" --> 훈련생 : 강의 정보 페이지 반환
+
+else 인증 실패
+mOTP --> "구름 출결 본인인증 시스템" : 인증 실패 응답 제공 (4xx/5xx ERROR)
+"구름 출결 본인인증 시스템" --> 훈련생: 타사 본인인증 모듈로 연결하여 다른 방식으로 본인인증 할 수 있게 유도
+훈련생 -> "2차 본인인증모듈": 본인인증 요청
+note right: mOTP 인증 실패 시 naver, 카카오, PASS 앱 등으로\n 2차 인증 시도
+end
+'/
 @enduml
