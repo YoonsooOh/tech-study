@@ -1,4 +1,5 @@
 # 본인인증 기획
+ 
 
 # 0. 기획회의에서 합의된 내용
 
@@ -66,6 +67,9 @@
 - (Q5) 채널 Admin 관리자가 스스로 본인 인증을 강제하는 플로우도 존재하는가?
   - 존재한다.
 
+> 참고: 채널 admin 관리자 페이지 구성
+> - https://github.com/sudodbhan/yoonsoostudy/blob/main/practice-0507
+>   - https://app.diagrams.net/#Hsudodbhan%2Fyoonsoostudy%2Fmain%2Fpractice-0507
 
 - **채널 멤버**는
   - (UCM1) 본인 인증이 강제된 채널에 가입한 경우 로그인 시 팝업창을 통해 본인 인증을 진행할 수 있다.
