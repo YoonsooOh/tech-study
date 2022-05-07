@@ -1,11 +1,26 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+title (UCA1) 채널 Admin 관리자는 해당 채널의 모든 멤버에 대해 개별적으로 본인 인증이 1회 강제 되도록 설정할 수 있다.
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+actor "채널 Admin 관리자"
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+box "구름 채널 모듈"
+participant "본인 인증 설정 페이지"
+endbox
+
+alt 개별 멤버에 대한 본인 인증 설정 on / off
+"채널 Admin 관리자" -> "본인 인증 설정 페이지" : 1. 접근
+"본인 인증 설정 페이지" --> "채널 Admin 관리자" : 2. 채널에 속한 모든 멤버의 [유형, ID]를 리스트로 표시
+note right
+멤버의 유형: 관리자/강사/수강생
+end note
+"채널 Admin 관리자" -> "본인 인증 설정 페이지" : 3. 리스트 항목 옆 토글 버튼을 on /off
+"본인 인증 설정 페이지" -> "본인 인증 설정 페이지" : 4. on / off 상태에 따라 해당 멤버에게 본인 인증 강제 혹은 해제
+end
+
+alt 일괄 본인 인증 설정 on / off
+"채널 Admin 관리자" -> "본인 인증 설정 페이지" : 1. 최 상단 일괄 on / off 버튼 클릭
+"본인 인증 설정 페이지" -> "본인 인증 설정 페이지" : 2. on / off 상태에 따라 모든 멤버에게 본인 인증 강제 혹은 해제
+"본인 인증 설정 페이지" --> "채널 Admin 관리자" : 3. 2.의 결과가 갱신된 멤버 리스트 제공
+end
 @enduml
