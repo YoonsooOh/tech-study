@@ -23,10 +23,10 @@
 
 ### 1. 채널 Admin 관리자
 
-### 2. 채널의 멤버
+### 2. 구름 스쿨 회원
 
 - 2가지 유형이 있음
-  - goormedu 계정으로 가입된 멤버
+  - goormedu 계정으로 가입
     - 사용자 관리 메뉴에서 이메일 항목이 채워져 있음
   - 채널에서 임의로 생성해준 계정으로 `https://goormschool.goorm.io/` 에만 로그인 가능한 멤버
     - 사용자 관리 메뉴에서 로그인 아이디 항목이 채워져 있음
@@ -72,7 +72,7 @@
 > - https://github.com/sudodbhan/yoonsoostudy/blob/main/practice-0507
 >   - https://app.diagrams.net/#Hsudodbhan%2Fyoonsoostudy%2Fmain%2Fpractice-0507
 
-- **채널 멤버**는
+- **구름 스쿨 회원**은
   - (UCM1) 본인 인증이 강제된 채널에 가입한 경우 로그인 시 본인 인증을 진행할 수 있다.
     - (UCM1-1) 해당 채널에 대해 이미 본인 인증을 진행한 경우 팝업창이 표시되지 않는다.
     - (UCM1-2) goormedu 계정으로 로그인한 멤버의 경우 이전에 다른 채널에서 본인 인증을 완료한 경우 팝업창이 표시되지 않는다.
