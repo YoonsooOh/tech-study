@@ -35,7 +35,7 @@ end
 group [성공 Case 2] mOTP 인증 실패 후 2차 본인인증 성공 시
 mOTP --> "Public mOTP 연동모듈" : 인증 실패 메세지
 "Public mOTP 연동모듈" -> "2차 본인인증모듈" : 인증 요청
-note right: mOTP 인증 실패 시 naver, 카카오, PASS 앱 등으로\n 2차 인증 시도
+note right: mOTP 인증 실패 시 다날로\n 2차 인증 시도
 "2차 본인인증모듈" --> "Public mOTP 연동모듈" : 인증 성공 메세지
 "Public mOTP 연동모듈" --> "구름 스쿨 메인 페이지" : 인증 성공 메세지
 "구름 스쿨 메인 페이지" --> "구름 스쿨 회원": 인증 성공 안내
